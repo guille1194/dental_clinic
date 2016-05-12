@@ -1,0 +1,47 @@
+    <!-- Begin Content -->
+    {% block content %}
+    <div class="main-container with-padding" style="background-color: rgba(0,0,0,.2);">
+
+        <div class="wrapper">
+
+            <div class="inner-wrapper">
+
+                <div class="contact-2">
+
+                    <div class="content-inner clearfix">
+
+                        <div class="row">
+                            <div class="col full">
+                              <a href="{% url 'home:bash' id=1000 %}">
+                                <h4>REGISTRAR Usuario</h4>
+                            </div>
+                        </div>
+
+                        <div class="divider clear" style="height:0px;"></div>
+
+                        <div class="col two-third">
+                            <form method="POST" enctype="multipart/form-data" >
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <input class="btn-cust" type="submit" value="Enviar">
+                                <input class="btn-cust" type="reset" value="Cancelar">
+                            </form>
+                        </div>
+
+
+                        <div class="divider clear" style="height:200px;"></div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    {% endblock content %}
+    <!-- End Content -->
